@@ -1,0 +1,131 @@
+{
+  "src": "D:\\ParkourChase\\跑酷追逐游戏.html",
+  "url": "file:///D:/ParkourChase/%E8%B7%91%E9%85%B7%E8%BF%BD%E9%80%90%E6%B8%B8%E6%88%8F.html",
+  "outdir": "D:\\ParkourChase\\_shots",
+  "include": [
+    "lint",
+    "screenshots",
+    "structure"
+  ],
+  "shots": {
+    "desktop": {
+      "screenshot": "D:\\ParkourChase\\_shots\\跑酷追逐游戏_desktop.jpg",
+      "screenshotBytes": 25772,
+      "truncated": false,
+      "structure": {
+        "title": "霓虹追逐 · NEON CHASE",
+        "firstH1": "",
+        "viewport": {
+          "w": 1410,
+          "h": 758
+        },
+        "fullpage": {
+          "w": 1410,
+          "h": 758
+        },
+        "counts": {
+          "section": 0,
+          "h1": 0,
+          "h2": 0,
+          "img": 2,
+          "canvas": 1,
+          "svg": 4,
+          "links": 0,
+          "buttons": 8
+        }
+      },
+      "consoleErrors": [],
+      "consoleWarnings": [],
+      "horizontalOverflow": [],
+      "resourceErrors": [],
+      "reportSource": "cdp"
+    },
+    "mobile": {
+      "screenshot": "D:\\ParkourChase\\_shots\\跑酷追逐游戏_mobile.jpg",
+      "screenshotBytes": 32779,
+      "truncated": false,
+      "structure": {
+        "title": "霓虹追逐 · NEON CHASE",
+        "firstH1": "",
+        "viewport": {
+          "w": 492,
+          "h": 702
+        },
+        "fullpage": {
+          "w": 492,
+          "h": 702
+        },
+        "counts": {
+          "section": 0,
+          "h1": 0,
+          "h2": 0,
+          "img": 2,
+          "canvas": 1,
+          "svg": 4,
+          "links": 0,
+          "buttons": 8
+        }
+      },
+      "consoleErrors": [],
+      "consoleWarnings": [],
+      "horizontalOverflow": [],
+      "resourceErrors": [],
+      "reportSource": "cdp"
+    }
+  },
+  "engine": "chrome_cli",
+  "chromiumExec": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+  "engineDegraded": true,
+  "engineDegradedReason": "playwright 未装",
+  "elapsedSec": 6.81,
+  "schemaVersion": 2,
+  "status": "pass",
+  "engineInfo": {
+    "name": "chrome_cli",
+    "degraded": true,
+    "degradedReasons": [
+      "playwright 未装"
+    ]
+  },
+  "input": {
+    "original": "D:\\ParkourChase\\跑酷追逐游戏.html",
+    "resolvedPath": "D:\\ParkourChase\\跑酷追逐游戏.html",
+    "baseUrl": "file:///D:/ParkourChase/%E8%B7%91%E9%85%B7%E8%BF%BD%E9%80%90%E6%B8%B8%E6%88%8F.html",
+    "protocol": "file",
+    "cwd": "C:\\Users\\24366\\Doubao\\chats\\2026-10-22\\new-chat",
+    "mediaMode": {
+      "reducedMotion": true
+    }
+  },
+  "artifacts": {
+    "screenshots": [
+      {
+        "viewport": "desktop",
+        "path": "D:\\ParkourChase\\_shots\\跑酷追逐游戏_desktop.jpg",
+        "size": 25772,
+        "visualCoverage": {
+          "complete": true,
+          "reason": null
+        }
+      },
+      {
+        "viewport": "mobile",
+        "path": "D:\\ParkourChase\\_shots\\跑酷追逐游戏_mobile.jpg",
+        "size": 32779,
+        "visualCoverage": {
+          "complete": true,
+          "reason": null
+        }
+      }
+    ]
+  },
+  "summary": {
+    "blocker": 0,
+    "error": 0,
+    "warning": 0,
+    "info": 0
+  },
+  "findings": [],
+  "prioritizedActions": [],
+  "reportPath": "D:\\ParkourChase\\_shots\\report.json"
+}
