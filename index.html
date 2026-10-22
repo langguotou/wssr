@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>跑酷游戏</title>
+<script src="https://cdn.jsdelivr.net/npm/phaser@3.80.1/dist/phaser.min.js"></script>
+<style>
+body{margin:0;background:#111;display:flex;justify-content:center}
+</style>
+</head>
+<body>
+<script>
+const config = {
+    type: Phaser.AUTO,
+    width: 800,
+    height: 300,
+    physics: {
+        default: 'arcade',
+        arcade: {gravity:{y:500}, debug:false}
+    },
+    scene: {preload, create, update}
+};
+new Phaser.Game(config);
+let player, ground, obstacles, score=0, scoreText;
+function preload(){}
+function create(){
+    ground = this.add.rectangle(400,280,800,40,0x33cc33);
+    this.physics.add.existing(ground,true);
+    player = this.add.rectangle(80,220,30,40,0x4488ff);
+    this.physics.add.existing(player);
+    player.body.setCollideWorldBounds(true);
+    obstacles = this.physics.add.group();
+    this.physics.add.collider(player,ground);
+    this.physics.add.collider(player,obstacles,gameOver,null,this);
+    scoreText = this.add.text(10,10,'Score:0',{fontSize:'24px',fill:'#fff'});
+    this.input.keyboard.on('keydown-SPACE',jump);
+    this.time.addEvent({delay:1200,callback:spawnObstacle,callbackScope:this,loop:true});
+}
+function update(){
+    score += 0.1;
+    scoreText.setText('Score: '+Math.floor(score));
+    obstacles.children.iterate(obs=>{
+        if(obs.x < -20) obs.destroy();
+    })
+}
+function jump(){
+    if(player.body.touching.down){
+        player.body.setVelocityY(-280);
+    }
+}
+function spawnObstacle(){
+    let obs = this.add.rectangle(820,245,25,35,0xff5555);
+    this.physics.add.existing(obs);
+    obs.body.setVelocityX(-220);
+    this.physics.add.collider(obs,ground);
+}
+function gameOver(){
+    this.physics.pause();
+    scoreText.setText('游戏结束！分数：'+Math.floor(score));
+}
+</script>
+</body>
+</html>
